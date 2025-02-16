@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Indicador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Editar Indicador</h1>
+    <form method="POST">
+        <label>Data:</label>
+        <input type="text" name="data" value="{{ indicador.data }}" required>
+        <br>
+        <label>UTI:</label>
+        <input type="text" name="uti" value="{{ indicador.uti }}" required>
+        <br>
+        <label>Enfermeiro:</label>
+        <input type="text" name="enfermeiro" value="{{ indicador.enfermeiro }}" required>
+        <br>
+        <label>Turno:</label>
+        <input type="text" name="turno" value="{{ indicador.turno }}" required>
+        <br>
+        <label>Admissões:</label>
+        <input type="number" name="admissoes" value="{{ indicador.admissoes }}" required>
+        <br>
+        <label>Readmissões 24h:</label>
+        <input type="number" name="readmissoes_24h" value="{{ indicador.readmissoes_24h }}" required>
+        <br>
+        <label>Óbitos 24h:</label>
+        <input type="number" name="obitos_24h" value="{{ indicador.obitos_24h }}" required>
+        <br>
+        <label>Óbitos > 24h:</label>
+        <input type="number" name="obitos_maior_24h" value="{{ indicador.obitos_maior_24h }}" required>
+        <br>
+        <label>Óbitos < 7d:</label>
+        <input type="number" name="obitos_menor_7d" value="{{ indicador.obitos_menor_7d }}" required>
+        <br>
+        <label>Óbitos > 7d:</label>
+        <input type="number" name="obitos_maior_7d" value="{{ indicador.obitos_maior_7d }}" required>
+        <br>
+        <label>Altas Até 10h:</label>
+        <input type="number" name="altas_ate_10h" value="{{ indicador.altas_ate_10h }}" required>
+        <br>
+        <label>Altas Depois 10h:</label>
+        <input type="number" name="altas_depois_10h" value="{{ indicador.altas_depois_10h }}" required>
+        <br>
+        <label>Quedas:</label>
+        <input type="number" name="quedas" value="{{ indicador.quedas }}" required>
+        <br>
+        <label>Transferências:</label>
+        <input type="number" name="transferencias" value="{{ indicador.transferencias }}" required>
+        <br>
+        <label>Pacientes CVC:</label>
+        <input type="number" name="pacientes_cvc" value="{{ indicador.pacientes_cvc }}" required>
+        <br>
+        <label>Perda CVC:</label>
+        <input type="number" name="perda_cvc" value="{{ indicador.perda_cvc }}" required>
+        <br>
+        <label>CVC Nova:</label>
+        <input type="number" name="cvc_nova" value="{{ indicador.cvc_nova }}" required>
+        <br>
+        <label>Extubação Não Planejada:</label>
+        <input type="number" name="extubacao_nao_planejada" value="{{ indicador.extubacao_nao_planejada }}" required>
+        <br>
+        <label>VM Nova:</label>
+        <input type="number" name="vm_nova" value="{{ indicador.vm_nova }}" required>
+        <br>
+        <label>Pacientes em VM:</label>
+        <input type="number" name="pcte_vm" value="{{ indicador.pcte_vm }}" required>
+        <br>
+        <label>Pacientes com SNG/SNE:</label>
+        <input type="number" name="pcte_sng_sne" value="{{ indicador.pcte_sng_sne }}" required>
+        <br>
+        <label>Pacientes com AVP:</label>
+        <input type="number" name="pacientes_avp" value="{{ indicador.pacientes_avp }}" required>
+        <br>
+        <label>Perdas de AVP:</label>
+        <input type="number" name="perdas_avp" value="{{ indicador.perdas_avp }}" required>
+        <br>
+        <label>Transfusões:</label>
+        <input type="number" name="transfusoes" value="{{ indicador.transfusoes }}" required>
+        <br>
+        <label>Reações Transfusionais:</label>
+        <input type="number" name="reacoes_transfusionais" value="{{ indicador.reacoes_transfusionais }}" required>
+        <br>
+        <label>Flebites:</label>
+        <input type="number" name="flebites" value="{{ indicador.flebites }}" required>
+        <br>
+        <label>Erros de Medicação:</label>
+        <input type="number" name="erros_medicacao" value="{{ indicador.erros_medicacao }}" required>
+        <br>
+        <br>
+        <button type="submit">Salvar Alterações</button>
+    </form>
+    <br>
+    <a href="{{ url_for('dashboard') }}">Voltar para o Dashboard</a>
+</body>
+</html>
