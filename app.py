@@ -139,6 +139,10 @@ def exportar_excel():
     data_fim = request.args.get("dataFim")
     uti = request.args.get("uti")
 
+@app.route('/')
+def index():
+    return redirect(url_for('login'))  # Redireciona automaticamente para o login
+
     # Construir a query com filtros opcionais
     query = Indicador.query
 
